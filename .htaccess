@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^myplayband\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.myplayband\.com$
+RewriteCond %{REQUEST_URI} !^/web/
+RewriteRule (.*) /web/$1 [L]
