@@ -1,0 +1,7 @@
+parameters:
+#    my_play_band_usuario.example.class: MyPlayBand\UsuarioBundle\Example
+
+services:
+#    my_play_band_usuario.example:
+#        class: %my_play_band_usuario.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
