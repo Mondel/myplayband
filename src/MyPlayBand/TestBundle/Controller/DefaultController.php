@@ -32,7 +32,7 @@ class DefaultController extends Controller
 
 	            return $this->render(
 				    'MyPlayBandTestBundle:Default:info.html.twig',
-					array('info' => shell_exec('pwd'))
+					array('info' => shell_exec('cd ../src/MyPlayBand/MusicaBundle/extras/;./echoprint-codegen ' . $song->getAbsolutePath()))
 				);
 	        }
 	    }
