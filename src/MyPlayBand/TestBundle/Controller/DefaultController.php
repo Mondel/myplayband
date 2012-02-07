@@ -30,9 +30,10 @@ class DefaultController extends Controller
 	            $em->persist($song);
 	            $em->flush();
 
-	            $this->redirect(
-		            $this->generateUrl('info_upload', array('info' => shell_exec('pwd')))
-	            );
+	            return $this->render(
+				    'MyPlayBandTestBundle:Default:info.html.twig',
+					array('info' => shell_exec('pwd'))
+				);
 	        }
 	    }
 
@@ -41,4 +42,5 @@ class DefaultController extends Controller
 			array('form' => $form->createView())
 		);
 	}
+
 }

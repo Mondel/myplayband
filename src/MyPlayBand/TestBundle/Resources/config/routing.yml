@@ -1,7 +1,3 @@
 test:
     pattern:  /test
     defaults: { _controller: MyPlayBandTestBundle:Default:test }
-
-info_upload:
-    pattern:  /info
-    defaults: { _controller: MyPlayBandTestBundle:Default:info }
