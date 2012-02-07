@@ -1,3 +1,15 @@
+MyPlayBandMusicaBundle:
+    resource: "@MyPlayBandMusicaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+MyPlayBandArtistaBundle:
+    resource: "@MyPlayBandArtistaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+MyPlayBandTestBundle:
+    resource: "@MyPlayBandTestBundle/Resources/config/routing.yml"
+    prefix:   /
+
 MyPlayBandUsuarioBundle:
     resource: "@MyPlayBandUsuarioBundle/Resources/config/routing.yml"
     prefix:   /

@@ -18,6 +18,9 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new MyPlayBand\UsuarioBundle\MyPlayBandUsuarioBundle(),
+            new MyPlayBand\TestBundle\MyPlayBandTestBundle(),
+            new MyPlayBand\ArtistaBundle\MyPlayBandArtistaBundle(),
+            new MyPlayBand\MusicaBundle\MyPlayBandMusicaBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {            

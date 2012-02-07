@@ -58,7 +58,7 @@ class Cancion
     protected $activo;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Artista", inversedBy="canciones")
+     * @ORM\ManyToOne(targetEntity="MyPlayBand\ArtistaBundle\Entity\Artista", inversedBy="canciones")
      * @ORM\JoinColumn(name="id_artista", referencedColumnName="id")
      */
     protected $artista;
@@ -191,9 +191,9 @@ class Cancion
     /**
      * Set artista
      *
-     * @param MyPlayBand\MusicaBundle\Entity\Artista $artista
+     * @param MyPlayBand\ArtistaBundle\Entity\Artista $artista
      */
-    public function setArtista(\MyPlayBand\MusicaBundle\Entity\Artista $artista)
+    public function setArtista(\MyPlayBand\ArtistaBundle\Entity\Artista $artista)
     {
         $this->artista = $artista;
     }
@@ -201,7 +201,7 @@ class Cancion
     /**
      * Get artista
      *
-     * @return MyPlayBand\MusicaBundle\Entity\Artista 
+     * @return MyPlayBand\ArtistaBundle\Entity\Artista 
      */
     public function getArtista()
     {

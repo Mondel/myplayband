@@ -72,7 +72,7 @@ class Album
     protected $archivo;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Artista", inversedBy="albumes")
+     * @ORM\ManyToOne(targetEntity="MyPlayBand\ArtistaBundle\Entity\Artista", inversedBy="albumes")
      * @ORM\JoinColumn(name="id_artista", referencedColumnName="id")
      */
     protected $artista;
@@ -84,7 +84,7 @@ class Album
     {
         $this->fecha_creacion = new \DateTime();
     }
-
+    
 
     /**
      * Get id
@@ -239,9 +239,9 @@ class Album
     /**
      * Set artista
      *
-     * @param MyPlayBand\MusicaBundle\Entity\Artista $artista
+     * @param MyPlayBand\ArtistaBundle\Entity\Artista $artista
      */
-    public function setArtista(\MyPlayBand\MusicaBundle\Entity\Artista $artista)
+    public function setArtista(\MyPlayBand\ArtistaBundle\Entity\Artista $artista)
     {
         $this->artista = $artista;
     }
@@ -249,7 +249,7 @@ class Album
     /**
      * Get artista
      *
-     * @return MyPlayBand\MusicaBundle\Entity\Artista 
+     * @return MyPlayBand\ArtistaBundle\Entity\Artista 
      */
     public function getArtista()
     {

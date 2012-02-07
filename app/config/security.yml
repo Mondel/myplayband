@@ -1,38 +1,47 @@
 security:
     encoders:
         Symfony\Component\Security\Core\User\User: plaintext
+        MyPlayBand\UsuarioBundle\Entity\Usuario: sha512
 
     role_hierarchy:
         ROLE_ADMIN:       ROLE_USER
         ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
 
     providers:
+        main:
+            providers: [in_memory, user_db]
         in_memory:
             users:
                 user:  { password: userpass, roles: [ 'ROLE_USER' ] }
                 admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
+        user_db:
+            entity: { class: MyPlayBand\UsuarioBundle\Entity\Usuario, property: email }
 
     firewalls:
+        secured_area:
+            pattern:    ^/
+            anonymous: ~
+            form_login:
+                login_path:     /ingresar
+                check_path:     /ingresar_chequeo
+                use_referer:    true
+            logout:
+                path:   /salir
+                target: /
+            #http_basic:
+                #realm: "Secured Demo Area"
+            remember_me:
+                key:      7869b2fa4458aaa7786e39d10410d5f3cd
+                lifetime: 3600
+                path:     /
+                domain:   ~
+                #Defaults to the current domain from $_SERVER
         dev:
             pattern:  ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
-        login:
-            pattern:  ^/demo/secured/login$
-            security: false
-
-        secured_area:
-            pattern:    ^/demo/secured/
-            form_login:
-                check_path: /demo/secured/login_check
-                login_path: /demo/secured/login
-            logout:
-                path:   /demo/secured/logout
-                target: /demo/
-            #anonymous: ~
-            #http_basic:
-            #    realm: "Secured Demo Area"
-
     access_control:
-        #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
+        - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/ingresar, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        #- { path: ^/administrar, roles: ROLE_ADMIN }
         #- { path: ^/_internal, roles: IS_AUTHENTICATED_ANONYMOUSLY, ip: 127.0.0.1 }

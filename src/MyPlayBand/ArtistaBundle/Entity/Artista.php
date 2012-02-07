@@ -43,13 +43,19 @@ class Artista
     protected $activo;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Genero", inversedBy="artistas")
+     * @ORM\JoinColumn(name="id_genero", referencedColumnName="id")
+     */
+    protected $genero;
+
+    /**
      * @ORM\ManyToOne(targetEntity="TipoArtista", inversedBy="artistas")
      * @ORM\JoinColumn(name="id_tipo_artista", referencedColumnName="id")
      */
     protected $tipo_artista;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Usuario", inversedBy="artistas")
+     * @ORM\ManyToOne(targetEntity="MyPlayBand\UsuarioBundle\Entity\Usuario", inversedBy="artistas")
      * @ORM\JoinColumn(name="id_usuario", referencedColumnName="id")
      */
     protected $usuario;
@@ -125,6 +131,26 @@ class Artista
     }
 
     /**
+     * Set genero
+     *
+     * @param MyPlayBand\ArtistaBundle\Entity\Genero $genero
+     */
+    public function setGenero(\MyPlayBand\ArtistaBundle\Entity\Genero $genero)
+    {
+        $this->genero = $genero;
+    }
+
+    /**
+     * Get genero
+     *
+     * @return MyPlayBand\ArtistaBundle\Entity\Genero 
+     */
+    public function getGenero()
+    {
+        return $this->genero;
+    }
+
+    /**
      * Set tipo_artista
      *
      * @param MyPlayBand\ArtistaBundle\Entity\TipoArtista $tipoArtista
@@ -147,9 +173,9 @@ class Artista
     /**
      * Set usuario
      *
-     * @param MyPlayBand\ArtistaBundle\Entity\Usuario $usuario
+     * @param MyPlayBand\UsuarioBundle\Entity\Usuario $usuario
      */
-    public function setUsuario(\MyPlayBand\ArtistaBundle\Entity\Usuario $usuario)
+    public function setUsuario(\MyPlayBand\UsuarioBundle\Entity\Usuario $usuario)
     {
         $this->usuario = $usuario;
     }
@@ -157,7 +183,7 @@ class Artista
     /**
      * Get usuario
      *
-     * @return MyPlayBand\ArtistaBundle\Entity\Usuario 
+     * @return MyPlayBand\UsuarioBundle\Entity\Usuario 
      */
     public function getUsuario()
     {
