@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new MyPlayBand\UsuarioBundle\MyPlayBandUsuarioBundle(),            
             new MyPlayBand\ArtistaBundle\MyPlayBandArtistaBundle(),
             new MyPlayBand\MusicaBundle\MyPlayBandMusicaBundle(),
+            new MyPlayBand\SitioBundle\MyPlayBandSitioBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {            
