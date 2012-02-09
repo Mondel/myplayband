@@ -17,8 +17,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
-            new MyPlayBand\UsuarioBundle\MyPlayBandUsuarioBundle(),
-            new MyPlayBand\TestBundle\MyPlayBandTestBundle(),
+            new MyPlayBand\UsuarioBundle\MyPlayBandUsuarioBundle(),            
             new MyPlayBand\ArtistaBundle\MyPlayBandArtistaBundle(),
             new MyPlayBand\MusicaBundle\MyPlayBandMusicaBundle(),
         );
