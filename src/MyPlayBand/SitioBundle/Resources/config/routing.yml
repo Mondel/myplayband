@@ -1,0 +1,3 @@
+MyPlayBandSitioBundle_homepage:
+    pattern:  /
+    defaults: { _controller: MyPlayBandSitioBundle:Default:index }

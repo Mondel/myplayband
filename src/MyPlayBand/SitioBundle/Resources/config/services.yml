@@ -1,0 +1,7 @@
+parameters:
+#    my_play_band_sitio.example.class: MyPlayBand\SitioBundle\Example
+
+services:
+#    my_play_band_sitio.example:
+#        class: %my_play_band_sitio.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
