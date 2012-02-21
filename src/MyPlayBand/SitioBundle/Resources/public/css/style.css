@@ -204,3 +204,39 @@ ul.lof-navigator li{
 .lof-navigator li.active h3{
 	color:#FFF;
 }
+
+.lof-snleft  .lof-main-outer{
+		float:right;
+	}
+	/* move the main wapper to the right side */
+	.lof-snleft .lof-main-wapper{
+		margin-left:auto;
+		margin-right:inherit;
+		clear:both;
+		height:300px;
+	}
+	/* move the navigator to the left  side */
+	.lof-snleft .lof-navigator-outer{
+		left:0;
+		top:0;
+		right:inherit;
+		
+	}
+	
+	ul.lof-main-wapper li {
+		position:relative;	
+	}
+	.lof-snleft .lof-navigator .active{
+		background:url(/bundles/myplaybandsitio/img/arrow-bg2.gif) center right no-repeat;
+	}
+	.lof-snleft .lof-navigator li div{
+		margin-left:inherit;
+		margin-right:18px;
+	}
+	
+	.lof-snleft .lof-navigator li.active div{
+		margin-left:inherit;
+		margin-right:18px;
+		background:url(/bundles/myplaybandsitio/img/grad-bg2.gif)
+		
+	}
