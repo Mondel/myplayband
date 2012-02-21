@@ -10,7 +10,7 @@ body {
     margin-top:0px;
 }
 
-#container {
+#containerlayout {
     margin: 0 auto;
     padding: 0 10px;
     width: 900px;  
