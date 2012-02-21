@@ -6,6 +6,14 @@ body {
     font-family: Arial;
 }
 
+/* HEADER */
+
+#top {
+     background-color: #464646;
+     height: 40px;
+     margin-top:0px;
+}
+
 /* CONTAINER*/
 
 #container 
@@ -16,10 +24,3 @@ body {
     background: #ffffff;
 }
 
-/* HEADER */
-
-#top {
-     background-color: #464646;
-     height: 40px;
-     margin-top:0px;
-}
