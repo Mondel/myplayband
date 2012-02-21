@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 body { margin:0px; font-family:Arial, Helvetica, sans-serif;}
-#container { width:900px; margin:0px auto 0px; background:#FFFFFF; padding:10px; font-size:12px;}
+#container { width:900px; margin:0px auto 0px; background:#FFFFFF; padding:10px; font-size:12px; margin-top:100px; }
 
 a{
 	text-transform:none;
