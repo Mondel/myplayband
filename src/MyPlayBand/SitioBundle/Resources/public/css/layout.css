@@ -16,23 +16,11 @@ body {
     background: #ffffff;
 }
 
-
-
-
-
 /* HEADER */
 
-
-
-
-
-
-
-
 #top {
-    background: url('../../bundles/mondelcuentalo/img/bg_header.png');
-    border-bottom: 3px solid #8f8f8f;
-    height: 56px;
+     background-color: #464646;
+    height: 40px;
 }
 
 .Wrap {
