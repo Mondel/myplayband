@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 body { margin:0px; font-family:Arial, Helvetica, sans-serif;}
-#container { width:900px; margin:0px auto 0px; background:#FFFFFF; padding:10px; font-size:12px; margin-top:100px; }
+
 
 a{
 	text-transform:none;
@@ -19,6 +19,8 @@ a{
 	border:#F4F4F4 solid 1px;
 	width:900px;
 	height:240px;
+	font-size:12px;
+	margin-top:100px;
 }
 .lof-slidecontent .preload{
 	height:100%;
@@ -30,6 +32,7 @@ a{
 	z-index:100000;
 	color:#FFF;
 	text-align:center
+	font-size:12px;
 }
 .lof-slidecontent .preload div{
 	height:100%;
