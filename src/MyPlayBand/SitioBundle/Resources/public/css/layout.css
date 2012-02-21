@@ -1,23 +1,17 @@
-/* BODY */
-
 body {
 	background: #ececec;
     color: #3b3b3b;
     font-family: Arial;
 }
 
-/* HEADER */
-
 #top {
-     background-color: #464646;
-     height: 40px;
-     margin-top:0px;
+    background-color: #464646;
+    height: 40px;
+    margin-top:0px;
 }
 
-/* CONTAINER*/
-
-#container 
-{   margin: 0 auto;
+#container {
+    margin: 0 auto;
     padding: 0 10px;
     width: 900px;  
     margin-top: 0px;
